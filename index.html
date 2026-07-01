@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register · Create Your Account</title>
+  <meta name="description" content="Multi-step registration form with Excel data export." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+
+  <style>
+    :root {
+      --bg-base:        #0a0b14;
+      --bg-card:        rgba(18,20,38,0.88);
+      --bg-input:       rgba(255,255,255,0.05);
+      --bg-input-focus: rgba(255,255,255,0.09);
+      --border:         rgba(255,255,255,0.08);
+      --border-focus:   rgba(120,80,255,0.7);
+      --accent-1:       #7b52ff;
+      --accent-2:       #e040fb;
+      --accent-3:       #00d4aa;
+      --grad-primary:   linear-gradient(135deg,#7b52ff 0%,#e040fb 100%);
+      --grad-success:   linear-gradient(135deg,#00d4aa 0%,#00b8d4 100%);
+      --grad-danger:    linear-gradient(135deg,#ff5c7d 0%,#ff8a65 100%);
+      --text-primary:   #f0f0f8;
+      --text-secondary: #9092b0;
+      --text-muted:     #5c5e80;
+      --error:          #ff5c7d;
+      --success:        #00d4aa;
+      --radius-lg:      18px;
+      --radius-sm:      8px;
+      --shadow-glow:    0 0 60px rgba(123,82,255,0.18);
+      --transition:     all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { font-size:16px; scroll-behavior:smooth; }
+    body {
+      font-family:'Inter',system-ui,sans-serif;
+      background:var(--bg-base); color:var(--text-primary);
+      height:100vh; 
+      overflow:hidden;
+    }
+    .banner{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      
+    }
+    .heading_wrapper{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9;
+      max-width: 40%;
+      width: 100%;
+      padding: 0 20px;
+      @media screen and (max-width:600px) {
+        max-width: 100%;
+      }
+    }
+    h1{
+      font-size: 5rem;
+      @media screen and (max-width:600px) {
+        font-size: 2rem;
+      }
+    }
+    /* ── Animated BG ── */
+    .bg-orbs { position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
+    .orb { position:absolute; border-radius:50%; filter:blur(80px); animation:drift 12s ease-in-out infinite alternate; }
+    .orb-1 { width:500px;height:500px;background:rgba(123,82,255,0.15);top:-15%;left:-10%;animation-delay:0s; }
+    .orb-2 { width:400px;height:400px;background:rgba(224,64,251,0.12);bottom:-10%;right:-8%;animation-delay:-4s; }
+    .orb-3 { width:350px;height:350px;background:rgba(0,212,170,0.10);top:40%;left:55%;animation-delay:-8s; }
+    @keyframes drift { from{transform:translate(0,0) scale(1)} to{transform:translate(30px,-40px) scale(1.08)} }
+
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="heading_wrapper">
+      <h1>Building the Future with AI</h1>
+      <p>Creating modern, responsive web applications by combining clean code with the power of AI.</p>
+    </div>
+      <spline-viewer url="https://prod.spline.design/GsKz6AZly51YRmCk/scene.splinecode"></spline-viewer>
+  </div>
+
+<!-- Animated background -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+</body>
+</html>
